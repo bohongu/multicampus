@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var br="<br>";
+var a;
+document.write(typeof(a)+br);
+a = 100;
+document.write(typeof(a)+br);
+a = 3.14;
+document.write(typeof(a)+br);
+a = true;
+document.write(typeof(a)+br);
+a = "javascript문자열";
+document.write(typeof(a)+br);
+a = function(){x = 10;}
+document.write(typeof(a)+br);
+a = [100, 200, 300];
+document.write(typeof(a)+br);
+
+var one = 100;
+var str = "\"javascript\"";
+document.write
+(one + "은 " + typeof(one) + "이고" + str + "는 " + typeof(str) + "입니다." + br);
+
+str = "자바스크립트는 함수형 언어이고\n객체지향언어입니다. \n지금은 변수를 배우는 중입니다.";
+document.write(str + br);
+console.log(str)
+
+//ecmascript6추가
+str = `자바스크립트는 함수형 언어이고
+객체지향언어입니다.
+지금은 변수를 배우는 중입니다.`;
+document.write(str + br);
+console.log(str)
+
+var i = 10, j = 20;
+document.write( i + "+" + j + "=" + (i+j) + br);
+document.write(`${i} + ${j} = ${i+j}` + br)
+
+var str3 = parseInt("100"); // str3 string
+document.write(str3 + 200 + br);
+var str4 = parseInt("3.14"); // str4 string
+document.write(str4 + 200 + br);
+str4 = parseFloat("3.14"); // str4 string
+document.write(str4 + 200 + br);
+
+</script>
+
+</body>
+</html>

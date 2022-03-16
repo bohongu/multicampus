@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.box{
+	display: inline-block;/* 자신 크기 가지며 한줄에 여러개 배치 */
+	width: 100px;
+	height: 100px;
+	background-color: purple;
+	color: white;
+}
+#two{2222
+/* position: relative; */
+position:fixed;
+top:50px;
+left:50px;
+background-color: red;
+z-index: 100;
+}
+#three{
+position: static;
+top:80px;
+left:80px;
+background-color: blue;
+z-index: 1;
+}
+
+</style>
+</head>
+<body>
+
+<div class="box" id="one">One</div>
+<div class="box" id="two">Two</div>
+<div class="box" id="three">Three</div>
+<div class="box" id="four">Four</div>
+
+</body>
+</html>

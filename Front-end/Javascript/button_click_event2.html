@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//DOM - DOCUMENT OBJECT MODEL
+// HTML 태그 - 자바스크립트 태그 표현 객체
+
+		var cnt = 1; //onload 연결함수 전역변수
+/*생략가능 window. */onload = function(){
+	document.getElementById("btn").onclick = function(){
+		//output 태그 읽어서 태그 내부 결과 출력 갱신
+		document.write('output').innerHTML = 
+			"버튼이 "+ cnt++ + " 번 클릭되었습니다.<br>";
+		
+	};	// btn 버튼 onclick end
+	document.getElementById("btn2").onclick = function(){
+	//클릭 이벤트 함수 해제
+	document.getElementById("btn2").onclick = null;
+	}//btn2 버튼 onclick end
+	
+	
+	
+}; // window.onload
+
+
+</script>
+
+</head>
+<body>
+<!-- html태그 공통속성
+title
+id
+class
+style
+onclick
+ -->
+<input type=button value="클릭" id="btn" >
+<input type=button value="클릭이벤트 제거" id="btn2" >
+
+<div id="output"></div>
+
+
+</body>
+</html>

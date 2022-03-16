@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input type=tel id="phone">
+<div id=result>결과 표시</div>
+<script>
+window.onload = function(){
+	var phone = document.getElementById("phone");
+	phone.onkeydown = function(ev){
+		//이벤트객체 정보 -ev
+		//0-9 숫자 - 0(48) 9(57)
+		//A-Z - 65-???
+		if(ev.keyCode >= 48 && ev.keyCode <= 57){
+			document.getElementById("result").innerHTML = ev.key + "=적합";	
+			document.getElementById("result").style.color="green";
+		}
+		else{
+			document.getElementById("result").innerHTML = ev.key + "=부적합";	
+			document.getElementById("result").style.color="red";
+		}
+	}
+}
+</script>
+
+<!-- url, email -- http:// 시작 또는 @포함 html태그 체크 유효성 -->
+<!-- tel pattern 지정 유효성검사는 submit 발생  -->
+<!-- phone 키 1개 입력시마다 유효성 검사 
+keyup이벤트처리
+  -->
+  
+<!-- <form action="">
+<input type=tel id="phone" pattern="010[0-9]{3,4}[0-9]{4}" >  
+<input type=submit value="전송">
+</form> -->
+</body>
+</html> 

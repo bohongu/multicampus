@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> 상품 등록 페이지 </title>
+<!-- 짝수번째 행 글씨색상 오렌지 -->
+<style>
+tr:nth-child(2n+1) {color:orange;}
+tr:last-child {text-align: center;}
+</style>
+
+</head>
+<body>
+
+<form action="productinsert.jsp">
+<table border=3>
+<caption></caption>
+
+<tr><td colspan=2>HTML 
+<img src="http://localhost:8080/html/images/1.gif" width=150 height=150>
+ 를 이용한 상품등록 페이지입니다.</b></tr></td>
+<tr><td>상품코드</td><td>	<input type=text name=code><br>	</td></tr>
+<tr><td>상품명</td><td>	<input type=text name=name><br>	</td></tr>
+<tr><td>가격</td><td>
+<input type="radio" name=code value=1000> 1000
+<input type="radio" name=code value=2000> 2000
+<input type="radio" name=code value=3000> 3000
+<input type="radio" name=code value=4000> 4000</td></tr>
+<tr><td>재고수량</td><td>	<input type=text name=su><br>	</td></tr>
+<tr><td>분류</td><td>	
+<input type="checkbox" name=subject value="가전"> 가전
+<input type="checkbox" name=subject value="의류"> 의류
+<input type="checkbox" name=subject value="식품"> 식품
+<input type="checkbox" name=subject value="의식주"> 의식주</td></tr><br>
+<tr><td colspan=2>	<input type=submit value="상품등록">	</td></tr>
+<button type="button" style="display:block; width:100%; text-align:center; font-size:1em; padding:2px;" onclick="history.go(0)">새로고침 >></button>
+</body>
+</html>

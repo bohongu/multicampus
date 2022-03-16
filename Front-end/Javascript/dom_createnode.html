@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div id="create"> </div>
+
+<script>
+window.onload = function(){
+	//1.img 태그 생성한다.
+	var imgtag = document.createElement("img");
+	//2.img src속성 - 이미지파일 설정한다.
+	imgtag.setAttribute("src","http://localhost:8080/html/images/1.gif");
+	//3.기타 속성 설정한다.
+	imgtag.setAttribute("alt", "html5 로고이미지");
+	//4.div 내부 보여라
+	document.getElementById('create').appendChild(imgtag.cloneNode());//복사본 추가
+
+	//a 추가 - href="http://localhost:8080/html/images/1.gif"
+	//a 링크문자열내용 - 이미지클릭
+	//이미지태그 다음에 삽입
+	var a = document.createElement("a");
+	a.setAttribute("href", "http://localhost:8080/html/images/1.gif");
+	a.textContent = "이미지클릭";
+	document.getElementById("create").appendChild(a);
+	
+	//imgtag를 1번 더 append
+	document.getElementById('create').appendChild(imgtag); // 위치이동.
+	
+	document.getElementById('create').removeChild(imgtag);
+
+}
+</script>
+
+</body>
+</html>

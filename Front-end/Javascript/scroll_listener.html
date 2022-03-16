@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var select = document.getElementsByClassName("select");
+//alert(select.length);
+for(var i = 0; i < select.length; i++){
+	select[i].addEventListener('click', autoscroll, false);
+	select[i].onclick = function(){this..}
+}// for end
+
+function autoscroll(){
+	var text = this.innerHTML;
+	var box = document.getElementsByClassName("box");
+	for(j in box){
+		if(box[j].innerHTML == text){
+			var rect = box[j].getBoundingClientRect();//top left height 
+			//alert(rect.top + ":" + rect.height);
+			scrollTo(0, rect.top + pageYOffset);//현재선택요소스크롤
+			//scrollTo(0,0);//페이지 상단 이동
+			//scrollTo(0, document.documentElement.scrollHeight);//페이지하단 이동
+			
+		}
+	}
+}//onclick function end;
+
+
+</script>
+</body>
+</html>

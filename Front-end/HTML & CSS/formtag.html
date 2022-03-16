@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  http://localhost:8080/html/b.html?search=자바 -->
+<form action="severLogin.jsp">
+	아이디입력 : <input type=text name=id><br>
+	암호임력 : <input type='password' name='pass word'><br>
+	관리자모드<input type=hidden name="admin" value="0"><br>
+	성별:<input type="radio" name=gender value=히히> 남
+		<input type="radio" name=gender value=호호> 여<br>
+	좋아하는과목<input type="checkbox" name=subject value="java"> 자바
+			<input type="checkbox" name=subject value="db"> 데이터베이스
+			<input type="checkbox" name=subject value="algorithm"> 알고리즘
+			<input type="checkbox" name=subject value="html"> HTML
+	
+	<input type=submit value="로그인">
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/XXduofGsA7A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+	
+
+</form>
+
+</body>
+</html>
+http://localhost:8080/html/severLogin.jsp?id=hihi
+&
+pass+word=1234
+&
+admin=0
+&
+gender=%ED%9E%88%ED%9E%88
+&
+subject=java
+&
+subject=algorithm
+&
+subject=html
+
+

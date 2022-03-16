@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var scope = "전역변수";
+function f1(){
+	/* var */ scope = "f1 지역변수";
+	document.write("f1함수 내부 =>" + scope + ":" + this.scope + br);
+/* 	for(var i = 1; i <= 10; i++){
+		document.write(i + br);
+	}
+	document.write(i + br);// */
+}
+f1();
+document.write("f1함수 외부=>" + scope + br);
+
+// var , const
+{
+var a = 10;
+const b = 20;
+let c = 30;
+// document.write("{}블록 내부=>" + a + br);
+// document.write("{}블록 내부=>" + b + br);
+// document.write("{}블록 내부=>" + c + br);
+var a = 100; // var 키워드 선언 중복 가능. 값 수정
+// const b = 200; // 상수. 1번 값 설정 수정 불가. 오류
+// let c = 300; // let 중복 선언 불가능. 오류
+c = 300; // 값 수정. 가능
+document.write("{}블록 내부=>" + a + br);
+document.write("{}블록 내부=>" + b + br);
+document.write("{}블록 내부=>" + c + br);
+
+}
+document.write("{}블록 외부=>" + a + br);
+
+</script>
+
+</body>
+</html>

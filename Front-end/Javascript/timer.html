@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="here">요기가 어떻게 변하나 보세요</div>
+<script>
+//3초 후에 here id 태그 내부 문자열 변경
+//window.setTimeout(함수 , 숫자 )
+/* window.setTimeout(function(){
+	document.getElementById("here").innerHTML = new Date().toLocaleTimeString();
+},3000); */
+
+//1초마다 시간 표시
+var timer = window.setInterval(function(){
+	document.getElementById("here").innerHTML +=
+		new Date().toLocaleTimeString() + "<br>";
+},1000);
+
+//10초후에 시간표시 안한다
+setTimeout(function(){
+	//1초마다 시간 표시 중단
+	clearInteval(timer)// 	clearInteval(중단 타이머 이름)
+	}, 10000);  // 	setInterval(함수,시간주기)
+	
+</script>
+
+</body>
+</html>

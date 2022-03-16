@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var i = 100;//변수선언. 변수 hoisting
+let j = 200;//변수선언. 변수 hoisting불가. 값 수정 가능
+const k = 300;//변수선언. 변수 hoisting불가. 값수정불가(상수)
+
+i = 1000;
+j = 2000;
+//k = 3000; //변경불가
+
+var a, b, c;//undefined
+var a2= 10, b2= 30; //타입결정-변경가능
+a2 = 3.14;
+a2 = "js";
+
+
+</script>
+
+</body>
+</html>

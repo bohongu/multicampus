@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+div{
+width:500px;
+background-color:blue;
+padding:20px;
+}
+a{
+width:100px;
+background-color:green;
+font-size: 30px;
+}
+
+</style>
+</head>
+<body>
+<div>
+<a href="test.html">이동</a>
+</div>
+<script>
+var inner = document.getElementById("inner");
+var outer = document.getElementById("outer");
+inner.onclick = function(ev){
+	alert("1.자식태그에서 이벤트 발생");
+	ev.preventDefault();//a태그 기본동작 무효화
+	ev.stopPropagation();//부모 이벤트 전파 방지
+	}
+outer.onclick = function(){alert("2.부모태그에서 이벤트 발생");}
+</script>
+
+<!-- a태그 동작 이벤트 핸들러함수 구현하지 않고도 클릭하면 href 속성 사이트 이동 동작
+	내부 동작 내장(a+ 클릭함수()) 
+	a태그 기본 내장 동작 무효화 - 링크 클릭해도 href 사이트 이동x
+-->
+
+
+</body>
+</html>
